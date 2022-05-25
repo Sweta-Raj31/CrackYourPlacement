@@ -1,0 +1,16 @@
+class Solution{
+    
+public:
+string convertToTitle(int num) {
+    string ans;
+    while(num)
+    {
+        int val=(num-1)%26;
+        ans+=('A'+val);
+        num=(num-1)/26;
+    }
+    reverse(ans.begin(),ans.end());
+    return ans;
+    
+}
+};
